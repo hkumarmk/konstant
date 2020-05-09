@@ -6,8 +6,10 @@
   checks:
   - id: 1.1.1.1
     desc: Ensure mounting of cramfs filesystems is disabled
-    type: kernelModule
+    type: kernelModule # Check type
+    # whether it is scored or not, default: false
     scored: true
+    # Check parameters, it is depends on check type
     params:
       name: cramfs
   - id: 1.1.1.2
